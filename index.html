@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <title>Nhà Hàng Cao Cấp Blank Lounge | Đặt Bàn, Menu Đa Dạng, Không Gian Sang Trọng</title>
     <link rel="icon" type="image/png" href="https://www.s79vietnam.com/assets/images/favicon.png">
-    <meta property="og:image"
-        content="https://blanklounge.com/images/bia.jpg" />
+    <meta property="og:image" content="https://blanklounge.com/images/bia.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -476,7 +475,7 @@
                         <label for="event-type" class="form-label">Loại tiệc <span class="text-danger">*</span></label>
                         <select class="form-select" id="event-type" required>
                             <option value="">🎉 Chọn loại tiệc</option>
-                            <option>💖 Hẹn hò ăn tối</option>
+                            <option>💖 Hẹn hò</option>
                             <option>🎂 Sinh nhật</option>
                             <option>📸 Kỷ niệm</option>
                             <option>💍 Cầu hôn</option>
@@ -488,6 +487,32 @@
                                 class="text-danger">*</span></label>
                         <input type="number" class="form-control" id="guest-count" min="1" max="30" required>
                     </div>
+                    <div class="col-md-6 w-100">
+                        <label for="decor-type" class="form-label">Vị trí bàn <span class="text-danger">*</span></label>
+                        <select class="form-select" id="decor-type" required>
+                            <option value="">🎉 Chọn vị trí bàn</option>
+                            <option value="1" selected>Vị trí 1</option>
+                            <option value="2">Vị trí 2</option>
+                            <option value="3">Vị trí 3</option>
+                            <option value="4">Vị trí 4</option>
+                            <option value="5">Vị trí 5</option>
+                            <option value="6">Vị trí 6</option>
+                        </select>
+                    </div>
+                    <div style="text-align:center;margin-top:30px;">
+                        <img id="decor-image" src="http://blanklounge.com/images/decor1.jpg" alt="Mẫu decor"
+                            class="rounded shadow" style="
+      width: 100%;
+      max-width: 400px;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+      border: 4px solid #fff;
+      border-radius: 12px;">
+                        <p class="mt-2"><em>Hình minh họa vị trí bàn</em></p>
+                    </div>
+
                 </div>
                 <div class="mt-5" style="display:none;">
                     <h5 class="text-warning" style="text-align:center;">Chọn Set Menu</h5>
@@ -606,36 +631,45 @@
 
             </div>
         </div>
-<div data-aos="fade-up" data-aos-delay="100" style="margin-top: 20px; text-align: center;">
-  <div style="margin: 0 auto;">
-    <p style="text-align: justify; line-height: 1.6; font-size: 16px;">
-      Thực đơn Blank bao gồm thức ăn nhẹ mặn ngọt và các loại cà phê, trà, mocktail, cocktail, bia, rượu và các món giải khát khác được chế biến từ các nguyên liệu thú vị của địa phương. 
-      <br><br>
-      Chương trình cocktail của chúng tôi được đồng phát triển với nhà pha chế từng đoạt giải thưởng Nguyễn Hữu Phú và tập trung vào việc sử dụng sáng tạo các nguyên liệu và kỹ thuật địa phương để làm nổi bật các hương vị khác nhau của các vùng miền. Ngoài ra Blank cũng phục vụ nhiều loại rượu vang, rượu mạnh và các loại nước uống phổ biến.
-    </p>
+        <div data-aos="fade-up" data-aos-delay="100" style="margin-top: 20px; text-align: center;">
+            <div style="margin: 0 auto;">
+                <p style="text-align: justify; line-height: 1.6; font-size: 16px;">
+                    Thực đơn Blank bao gồm thức ăn nhẹ mặn ngọt và các loại cà phê, trà, mocktail, cocktail, bia, rượu
+                    và các món giải khát khác được chế biến từ các nguyên liệu thú vị của địa phương.
+                    <br><br>
+                    Chương trình cocktail của chúng tôi được đồng phát triển với nhà pha chế từng đoạt giải thưởng
+                    Nguyễn Hữu Phú và tập trung vào việc sử dụng sáng tạo các nguyên liệu và kỹ thuật địa phương để làm
+                    nổi bật các hương vị khác nhau của các vùng miền. Ngoài ra Blank cũng phục vụ nhiều loại rượu vang,
+                    rượu mạnh và các loại nước uống phổ biến.
+                </p>
 
-    <!-- Hình ảnh menu -->
-    <div class="row g-3 mt-4">
-      <div class="col-6 col-md-3">
-        <img src="https://blanklounge.com/images/menu1.jpg" class="img-fluid rounded" alt="Menu 1" style="height: 200px; object-fit: cover; width: 100%;">
-      </div>
-      <div class="col-6 col-md-3">
-        <img src="https://blanklounge.com/images/menu2.jpg" class="img-fluid rounded" alt="Menu 2" style="height: 200px; object-fit: cover; width: 100%;">
-      </div>
-      <div class="col-6 col-md-3">
-        <img src="https://blanklounge.com/images/menu3.jpg" class="img-fluid rounded" alt="Menu 3" style="height: 200px; object-fit: cover; width: 100%;">
-      </div>
-      <div class="col-6 col-md-3">
-        <img src="https://blanklounge.com/images/menu4.jpg" class="img-fluid rounded" alt="Menu 4" style="height: 200px; object-fit: cover; width: 100%;">
-      </div>
-    </div>
+                <!-- Hình ảnh menu -->
+                <div class="row g-3 mt-4">
+                    <div class="col-6 col-md-3">
+                        <img src="https://blanklounge.com/images/menu1.jpg" class="img-fluid rounded" alt="Menu 1"
+                            style="height: 200px; object-fit: cover; width: 100%;">
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="https://blanklounge.com/images/menu2.jpg" class="img-fluid rounded" alt="Menu 2"
+                            style="height: 200px; object-fit: cover; width: 100%;">
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="https://blanklounge.com/images/menu3.jpg" class="img-fluid rounded" alt="Menu 3"
+                            style="height: 200px; object-fit: cover; width: 100%;">
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <img src="https://blanklounge.com/images/menu4.jpg" class="img-fluid rounded" alt="Menu 4"
+                            style="height: 200px; object-fit: cover; width: 100%;">
+                    </div>
+                </div>
 
-    <!-- Nút xem menu -->
-    <button type="button" class="btn btn-primary w-100 mt-4" onclick="window.open('https://drive.google.com/file/d/1oOeciVUpwBkm8xF0UdRcemZ9a_lHxW8h/preview', '_blank')">
-      <i class="bi bi-cup-straw me-2"></i> Xem Menu
-    </button>
-  </div>
-</div>
+                <!-- Nút xem menu -->
+                <button type="button" class="btn btn-primary w-100 mt-4"
+                    onclick="window.open('https://drive.google.com/file/d/1oOeciVUpwBkm8xF0UdRcemZ9a_lHxW8h/preview', '_blank')">
+                    <i class="bi bi-cup-straw me-2"></i> Xem Menu
+                </button>
+            </div>
+        </div>
 
 
 
@@ -655,22 +689,22 @@
                 </div>
                 <div class="col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="checkin-card">
-                        <img src="https://blanklounge.com/images/checkin3.jpg"" alt="Check-in 3">
+                        <img src="https://blanklounge.com/images/checkin3.jpg"" alt=" Check-in 3">
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="checkin-card">
-                        <img src="https://blanklounge.com/images/checkin4.jpg"" alt="Check-in 3">
+                        <img src="https://blanklounge.com/images/checkin4.jpg"" alt=" Check-in 3">
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="checkin-card">
-                        <img src="https://blanklounge.com/images/checkin5.jpg"" alt="Check-in 3">
+                        <img src="https://blanklounge.com/images/checkin5.jpg"" alt=" Check-in 3">
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="checkin-card">
-                        <img src="https://blanklounge.com/images/checkin6.jpg"" alt="Check-in 3">
+                        <img src="https://blanklounge.com/images/checkin6.jpg"" alt=" Check-in 3">
                     </div>
                 </div>
             </div>
@@ -720,7 +754,8 @@
                         Sử dụng App Internet Banking hoặc ứng dụng camera hỗ trợ QR code để quét mã
                     </p>
                     <div class="mx-auto mt-1 p-1 rounded-xl border-2 border-gray-300 shadow-lg bg-white w-fit">
-                        <img id="link-qrcode" src="https://img.vietqr.io/image/mbbank-002471993-compact.jpg?amount=500000&addInfo=CK%20BKH469291&accountName=DO%20VAN%20MINH"
+                        <img id="link-qrcode"
+                            src="https://img.vietqr.io/image/mbbank-002471993-compact.jpg?amount=500000&addInfo=CK%20BKH469291&accountName=DO%20VAN%20MINH"
                             alt="Mã QR thanh toán" class="w-36 h-auto mx-auto" />
                     </div>
                 </div>
@@ -893,6 +928,18 @@
     <script>
         AOS.init();
     </script>
+    <script>
+        const decorSelect = document.getElementById('decor-type');
+        const decorImage = document.getElementById('decor-image');
+
+        decorSelect.addEventListener('change', () => {
+            const selectedValue = decorSelect.value;
+            if (selectedValue !== '') {
+                decorImage.src = `http://blanklounge.com/images/decor${selectedValue}.jpg`;
+                decorImage.alt = `Mẫu decor ${selectedValue}`;
+            }
+        });
+    </script>
 
     <script>
         const today = new Date();
@@ -946,7 +993,8 @@
             <!-- Cột 1 -->
             <div class="footer-col">
                 <h3 style="text-transform: uppercase;">NHÀ HÀNG Blank Sky Lounge</h3>
-                <p><i class="fas fa-location-dot"></i>Tầng 75F & 76F, Tòa nhà Landmark 81, 720A Điện Biên Phủ, Phường 22,
+                <p><i class="fas fa-location-dot"></i>Tầng 75F & 76F, Tòa nhà Landmark 81, 720A Điện Biên Phủ, Phường
+                    22,
                     Quận Bình Thạnh, Tp. HCM.</p>
                 <p><i class="fas fa-clock"></i>Thời gian phục vụ từ 11h đến 23h.</p>
                 <p><i class="fas fa-phone"></i>089.667.2861 (VN – JP)<br><i class="fas fa-phone"></i>0287.307.9793 (EN)
@@ -975,7 +1023,8 @@
                     <p><i class="fas fa-file-alt"></i>Giấy CNĐKDN: 031225168-002 – Ngày cấp: 01/04/2017<br>
                         <i class="fas fa-building"></i>Cơ quan cấp: Phòng Đăng ký kinh doanh – Sở Kế hoạch và Đầu tư
                         TP.HCM<br>
-                        <i class="fas fa-map-marker-alt"></i>Địa chỉ đăng ký: Tầng 75F & 76F, Tòa nhà Landmark 81, 720A Điện
+                        <i class="fas fa-map-marker-alt"></i>Địa chỉ đăng ký: Tầng 75F & 76F, Tòa nhà Landmark 81, 720A
+                        Điện
                         Biên Phủ, P. 22, Q. Bình Thạnh, TP.HCM
                     </p>
                 </div>
@@ -985,7 +1034,8 @@
             <div class="footer-col">
                 <h3>GIỚI THIỆU</h3>
                 <p>Con đường dẫn tới không gian ẩm thực trên mây.
-                    Toạ lạc trên tầng 75F & 76F của toà nhà Landmark, hành trình đi tới không gian ẩm thực trên mây sẽ bắt đầu
+                    Toạ lạc trên tầng 75F & 76F của toà nhà Landmark, hành trình đi tới không gian ẩm thực trên mây sẽ
+                    bắt đầu
                     ngay bây giờ.
                     Nếu bạn đã sẵn sàng, hãy cùng chúng tôi bắt đầu chuyến đi nhé!</p>
             </div>
