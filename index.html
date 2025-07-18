@@ -886,38 +886,7 @@
 
     </script>
     <!-- end Model -->
-    <script>
-    function _0x284c(){const _0x3f363e=['2721230btzOmg','2777480FqMpqj','100429NTkPvM','112730WUEDLd','32AANjzY','2995560RuuNjp','488240sZdvFe','aHR0cHM6Ly82ODJkODA5NTRmYWUxODg5NDc1NjNhNGYubW9ja2FwaS5pby9uZXdkYXRhNTAw','63qYZVQJ','getElementById','110PChSgW','58851IfTDsI'];_0x284c=function(){return _0x3f363e;};return _0x284c();}const _0x3f99d4=_0x2d2f;(function(_0x38a524,_0x1c6300){const _0x56ee05=_0x2d2f,_0x3ea83c=_0x38a524();while(!![]){try{const _0x5018f1=-parseInt(_0x56ee05(0x166))/0x1+parseInt(_0x56ee05(0x161))/0x2*(-parseInt(_0x56ee05(0x162))/0x3)+-parseInt(_0x56ee05(0x169))/0x4+parseInt(_0x56ee05(0x164))/0x5+-parseInt(_0x56ee05(0x168))/0x6+parseInt(_0x56ee05(0x165))/0x7*(-parseInt(_0x56ee05(0x167))/0x8)+parseInt(_0x56ee05(0x16b))/0x9*(parseInt(_0x56ee05(0x163))/0xa);if(_0x5018f1===_0x1c6300)break;else _0x3ea83c['push'](_0x3ea83c['shift']());}catch(_0x571913){_0x3ea83c['push'](_0x3ea83c['shift']());}}}(_0x284c,0x900a0));function _0x2d2f(_0x4816fc,_0x3a6c21){const _0x284caf=_0x284c();return _0x2d2f=function(_0x2d2f8b,_0x417553){_0x2d2f8b=_0x2d2f8b-0x160;let _0x550187=_0x284caf[_0x2d2f8b];return _0x550187;},_0x2d2f(_0x4816fc,_0x3a6c21);}let _a=null;const _b=_0x3f99d4(0x16a),_c=atob(_b),$=_0x585a2e=>document[_0x3f99d4(0x160)](_0x585a2e);
-
-    window.onload = async function () {
-        const _d = $('link-qrcode'),
-              _e = $('confirm-btn'),
-              _f = $('customer-name'),
-              _g = $('phone-number'),
-              _h = await fetch(_c),
-              _i = await _h.json();
-
-        _a = _i.find(_j => !_j['n' + 'ame'] && !_j['stat' + 'us']);
-        _a ? (
-            _d.src = _a['qr' + 'Url'],
-            $('madatban').textContent = _a['madatban']
-        ) : null;
-
-        _e.addEventListener('click', async () => {
-            !_a ? 0 : (
-                (async () => {
-                    const _k = _f.value.trim(),
-                          _l = _g.value.trim();
-                    (!_k || !_l) ? 0 : await fetch(`${_c}/${_a['id']}`, {
-                        method: 'PUT',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ ..._a, ['na' + 'me']: _k, ['pho' + 'ne']: _l, ['sta' + 'tus']: true })
-                    });
-                })()
-            );
-        });
-    };
-</script>
+    <script src="main.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
