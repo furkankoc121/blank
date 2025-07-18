@@ -886,43 +886,40 @@
 
     </script>
     <!-- end Model -->
-    <!-- MockAPI -->
     <script>
-        let currentCustomer = null;
-        const apiUrl = 'https://682d80954fae188947563a4f.mockapi.io/data';
-        //name, phone, madatban, qrUrl ,status
-        window.onload = async () => {
-            const qrImage = document.getElementById('link-qrcode');
-            const confirmBtn = document.getElementById('confirm-btn');
-            const nameInput = document.getElementById('customer-name');
-            const phoneInput = document.getElementById('phone-number');
+    let currentCustomer = null;
+    function _0x2634(_0x5bc4d0,_0x12ba4b){const _0x3ba12a=_0x3ba1();return _0x2634=function(_0x2634d2,_0x532c80){_0x2634d2=_0x2634d2-0x1eb;let _0xddbbe=_0x3ba12a[_0x2634d2];return _0xddbbe;},_0x2634(_0x5bc4d0,_0x12ba4b);}const _0x3ae81e=_0x2634;(function(_0x7061b2,_0x101b82){const _0x24338b=_0x2634,_0x11b3c4=_0x7061b2();while(!![]){try{const _0x2d54bb=parseInt(_0x24338b(0x1ee))/0x1*(-parseInt(_0x24338b(0x1ed))/0x2)+-parseInt(_0x24338b(0x1f0))/0x3*(-parseInt(_0x24338b(0x1f3))/0x4)+-parseInt(_0x24338b(0x1f2))/0x5+-parseInt(_0x24338b(0x1f5))/0x6*(-parseInt(_0x24338b(0x1f6))/0x7)+parseInt(_0x24338b(0x1ec))/0x8*(-parseInt(_0x24338b(0x1f1))/0x9)+parseInt(_0x24338b(0x1ef))/0xa+parseInt(_0x24338b(0x1eb))/0xb;if(_0x2d54bb===_0x101b82)break;else _0x11b3c4['push'](_0x11b3c4['shift']());}catch(_0x45253a){_0x11b3c4['push'](_0x11b3c4['shift']());}}}(_0x3ba1,0x97e5d));function _0x3ba1(){const _0x524cad=['313064FRuHCL','30262htGqSY','79jrhJgB','11777150bkCyTq','3404535eSPocf','171gPmbcT','4065130DtFIip','4emJuWj','aHR0cHM6Ly82ODJkODA5NTRmYWUxODg5NDc1NjNhNGYubW9ja2FwaS5pby9kYXRh','42yzckJi','835723zPvFLQ','2483712uHOAEE'];_0x3ba1=function(){return _0x524cad;};return _0x3ba1();}const base64ApiUrl=_0x3ae81e(0x1f4),apiUrl=atob(base64ApiUrl);
 
-            const res = await fetch(apiUrl);
-            const customers = await res.json();
-            currentCustomer = customers.find(c => !c.name && c.status === false);
+    window.onload = async () => {
+        const qrImage = document.getElementById('link-qrcode');
+        const confirmBtn = document.getElementById('confirm-btn');
+        const nameInput = document.getElementById('customer-name');
+        const phoneInput = document.getElementById('phone-number');
 
-            if (currentCustomer) {
-                qrImage.src = currentCustomer.qrUrl;
-                document.getElementById('madatban').textContent = currentCustomer.madatban;
-            }
+        const res = await fetch(apiUrl);
+        const customers = await res.json();
+        currentCustomer = customers.find(c => !c.name && c.status === false);
 
+        if (currentCustomer) {
+            qrImage.src = currentCustomer.qrUrl;
+            document.getElementById('madatban').textContent = currentCustomer.madatban;
+        }
 
-            confirmBtn.addEventListener('click', async () => {
-                if (!currentCustomer) return;
+        confirmBtn.addEventListener('click', async () => {
+            if (!currentCustomer) return;
 
-                const name = nameInput.value.trim();
-                const phone = phoneInput.value.trim();
-                if (!name || !phone) return;
+            const name = nameInput.value.trim();
+            const phone = phoneInput.value.trim();
+            if (!name || !phone) return;
 
-                await fetch(`${apiUrl}/${currentCustomer.id}`, {
-                    method: 'PUT',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ ...currentCustomer, name, phone, status: true })
-                });
+            await fetch(`${apiUrl}/${currentCustomer.id}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ ...currentCustomer, name, phone, status: true })
             });
-        };
-    </script>
-    <!-- MockAPI -->
+        });
+    };
+</script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
