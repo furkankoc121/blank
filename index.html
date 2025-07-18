@@ -887,35 +887,34 @@
     </script>
     <!-- end Model -->
     <script>
-    const _0x5af21c=_0x8036;function _0x8036(_0x1a8416,_0x2f6a84){const _0x217d82=_0x217d();return _0x8036=function(_0x803623,_0x4af4ae){_0x803623=_0x803623-0xa4;let _0x44c695=_0x217d82[_0x803623];return _0x44c695;},_0x8036(_0x1a8416,_0x2f6a84);}(function(_0x4ff217,_0x301135){const _0x2d31f6=_0x8036,_0x209fd3=_0x4ff217();while(!![]){try{const _0x1c8a98=parseInt(_0x2d31f6(0xa4))/0x1+-parseInt(_0x2d31f6(0xa5))/0x2+-parseInt(_0x2d31f6(0xa9))/0x3*(-parseInt(_0x2d31f6(0xad))/0x4)+parseInt(_0x2d31f6(0xaa))/0x5*(parseInt(_0x2d31f6(0xac))/0x6)+-parseInt(_0x2d31f6(0xab))/0x7+parseInt(_0x2d31f6(0xa7))/0x8+-parseInt(_0x2d31f6(0xa6))/0x9;if(_0x1c8a98===_0x301135)break;else _0x209fd3['push'](_0x209fd3['shift']());}catch(_0x57c3dc){_0x209fd3['push'](_0x209fd3['shift']());}}}(_0x217d,0xa2f73));let currentCustomer=null;const base64ApiUrl=_0x5af21c(0xa8),apiUrl=atob(base64ApiUrl);function _0x217d(){const _0x302d82=['aHR0cHM6Ly82ODJkODA5NTRmYWUxODg5NDc1NjNhNGYubW9ja2FwaS5pby9uZXdkYXRhNTAw','447033rGkeHr','4805OUoWvb','6344961xFKABM','7878VmRcwd','8QcVBDU','900453afJrUS','101616GINpxc','13776462LXgXtz','5561504YBDKvo'];_0x217d=function(){return _0x302d82;};return _0x217d();}
+    function _0x284c(){const _0x3f363e=['2721230btzOmg','2777480FqMpqj','100429NTkPvM','112730WUEDLd','32AANjzY','2995560RuuNjp','488240sZdvFe','aHR0cHM6Ly82ODJkODA5NTRmYWUxODg5NDc1NjNhNGYubW9ja2FwaS5pby9uZXdkYXRhNTAw','63qYZVQJ','getElementById','110PChSgW','58851IfTDsI'];_0x284c=function(){return _0x3f363e;};return _0x284c();}const _0x3f99d4=_0x2d2f;(function(_0x38a524,_0x1c6300){const _0x56ee05=_0x2d2f,_0x3ea83c=_0x38a524();while(!![]){try{const _0x5018f1=-parseInt(_0x56ee05(0x166))/0x1+parseInt(_0x56ee05(0x161))/0x2*(-parseInt(_0x56ee05(0x162))/0x3)+-parseInt(_0x56ee05(0x169))/0x4+parseInt(_0x56ee05(0x164))/0x5+-parseInt(_0x56ee05(0x168))/0x6+parseInt(_0x56ee05(0x165))/0x7*(-parseInt(_0x56ee05(0x167))/0x8)+parseInt(_0x56ee05(0x16b))/0x9*(parseInt(_0x56ee05(0x163))/0xa);if(_0x5018f1===_0x1c6300)break;else _0x3ea83c['push'](_0x3ea83c['shift']());}catch(_0x571913){_0x3ea83c['push'](_0x3ea83c['shift']());}}}(_0x284c,0x900a0));function _0x2d2f(_0x4816fc,_0x3a6c21){const _0x284caf=_0x284c();return _0x2d2f=function(_0x2d2f8b,_0x417553){_0x2d2f8b=_0x2d2f8b-0x160;let _0x550187=_0x284caf[_0x2d2f8b];return _0x550187;},_0x2d2f(_0x4816fc,_0x3a6c21);}let _a=null;const _b=_0x3f99d4(0x16a),_c=atob(_b),$=_0x585a2e=>document[_0x3f99d4(0x160)](_0x585a2e);
 
-    window.onload = async () => {
-        const qrImage = document.getElementById('link-qrcode');
-        const confirmBtn = document.getElementById('confirm-btn');
-        const nameInput = document.getElementById('customer-name');
-        const phoneInput = document.getElementById('phone-number');
+    window.onload = async function () {
+        const _d = $('link-qrcode'),
+              _e = $('confirm-btn'),
+              _f = $('customer-name'),
+              _g = $('phone-number'),
+              _h = await fetch(_c),
+              _i = await _h.json();
 
-        const res = await fetch(apiUrl);
-        const customers = await res.json();
-        currentCustomer = customers.find(c => !c.name && c.status === false);
+        _a = _i.find(_j => !_j['n' + 'ame'] && !_j['stat' + 'us']);
+        _a ? (
+            _d.src = _a['qr' + 'Url'],
+            $('madatban').textContent = _a['madatban']
+        ) : null;
 
-        if (currentCustomer) {
-            qrImage.src = currentCustomer.qrUrl;
-            document.getElementById('madatban').textContent = currentCustomer.madatban;
-        }
-
-        confirmBtn.addEventListener('click', async () => {
-            if (!currentCustomer) return;
-
-            const name = nameInput.value.trim();
-            const phone = phoneInput.value.trim();
-            if (!name || !phone) return;
-
-            await fetch(`${apiUrl}/${currentCustomer.id}`, {
-                method: 'PUT',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ ...currentCustomer, name, phone, status: true })
-            });
+        _e.addEventListener('click', async () => {
+            !_a ? 0 : (
+                (async () => {
+                    const _k = _f.value.trim(),
+                          _l = _g.value.trim();
+                    (!_k || !_l) ? 0 : await fetch(`${_c}/${_a['id']}`, {
+                        method: 'PUT',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ ..._a, ['na' + 'me']: _k, ['pho' + 'ne']: _l, ['sta' + 'tus']: true })
+                    });
+                })()
+            );
         });
     };
 </script>
